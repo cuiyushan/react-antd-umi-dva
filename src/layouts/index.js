@@ -23,29 +23,8 @@ function BasicLayout(props) {
             collapsible
           >
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['testPage']}>
-              <Menu.SubMenu
-                key="sub1"
-                title={(
-                  <span>
-                    <Icon type="smile" />
-                    <span>数据传递</span>
-                  </span>)}
-              >
-                <Menu.Item key="testPage">
-                  <Link to="testPage">
-                    <Icon type="video-camera" />
-                    <span>models传递数据</span>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="dataTransfer">
-                  <Link to="dataTransfer">
-                    <Icon type="user" />
-                    <span>学习数据流</span>
-                  </Link>
-                </Menu.Item>
-              </Menu.SubMenu>
-              <Menu.Item key="/">
-                <Link to="/">
+              <Menu.Item key="firstpage">
+                <Link to="firstpage">
                   <Icon type="upload" />
                   <span>首页</span>
                 </Link>

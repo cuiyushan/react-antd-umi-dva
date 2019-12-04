@@ -4,7 +4,7 @@
   "private": true,
   "description": "this is personal project for some test",
   "scripts": {
-    "start": "cross-env PORT=8080 umi dev",
+    "start": "cross-env PORT=8090 umi dev",
     "build": "umi build",
     "test": "umi test",
     "lint": "eslint --ext .js src",
@@ -17,7 +17,9 @@
     "js-cookie": "^2.2.1",
     "fetch-detector": "^1.0.1",
     "fetch-ie8": "^1.5.0",
-    "react-document-title": "^2.0.3"
+    "react-document-title": "^2.0.3",
+    "dva": "latest",
+    "react": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

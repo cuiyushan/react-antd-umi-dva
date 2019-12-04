@@ -5,7 +5,13 @@ export default {
       component: '../layouts/index',
       // Routes: ['src/pages/Authorized'],
       routes: [
-        { path: '/', redirect: '/dataTransfer' },
+        { path: '/', redirect: '/firstpage' },
+        {
+          path: '/firstpage',
+          routes: [
+            { path: '/firstpage', component: './firstpage',},
+          ]
+        },
         {
           path: '/user',
           routes: [

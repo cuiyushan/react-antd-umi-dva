@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { Row, Card, Col, Table, Pagination, Input } from 'antd';
-
-const { Search } = Input;
+import { Row, Card, Col, Table, Pagination } from 'antd';
 
 @connect(({ user }) => ({
   ...user,
