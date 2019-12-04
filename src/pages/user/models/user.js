@@ -28,7 +28,6 @@ export default {
 
         const { retCode, retValue, dataRows, rowCount } = result;
 
-        console.log('--------', result);
         if (retCode === '1') {
           yield put({
             type: 'stateWillBeUpdated',
@@ -64,6 +63,28 @@ export default {
           pageSize,
         },
       });
+    },
+
+    * addUser({ payload }, { call, put }) {
+      const { newData } = payload;
+      const result = yield call(services.addUser, newData);
+      const { retCode, retValue } = result;
+
+      if (retCode && retCode === '1') {
+        notification.success({
+          message: '添加用户成功',
+          description: retValue,
+        });
+
+        yield put({
+          type: 'getUserList',
+        });
+      } else {
+        notification.error({
+          message: '添加用户失败',
+          description: retValue,
+        });
+      }
     },
   },
 };
